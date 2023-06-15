@@ -20,6 +20,7 @@ import Payment from "../Pages/Dashboard/Payment/Payment";
 import Error from "../Pages/ErrorPage/Error";
 import EnrolledClass from "../Pages/Dashboard/EnrolledClass/EnrolledClass";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
+import UpdateClass from "../Pages/Dashboard/UpdateClass/UpdateClass";
 
 const router = createBrowserRouter([
     {
@@ -84,6 +85,11 @@ const router = createBrowserRouter([
         {
           path: 'myallclass',
           element: <InstructorRoute><MyAllClass></MyAllClass></InstructorRoute>
+        },
+        {
+          path: 'myallclass/:id',
+          element: <InstructorRoute><UpdateClass></UpdateClass></InstructorRoute>,
+          loader: ({params}) => fetch(`http://localhost:5000/myclass/${params.id}`)
         },
       ]
     }

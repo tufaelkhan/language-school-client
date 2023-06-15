@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import useMyClass from "../../../Components/Hooks/useMyClass";
+import { Link } from "react-router-dom";
 
 const MyAllClass = () => {
     const [ myclass] = useMyClass()
@@ -23,7 +24,7 @@ const MyAllClass = () => {
                                 <button className="btn btn-secondary">Pending</button>
                                 <button className="btn btn-gost">Deny</button>
                                 <button className="btn btn-info">feedback</button>
-                                <button className="btn btn-primary">update</button>
+                                <Link to={`myclass/$`}><button className="btn btn-primary">update</button></Link>
                             </div>
                         </div>
                     </div>)
