@@ -4,9 +4,11 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import { FaUser,FaRegBookmark  } from 'react-icons/fa';
 import useSelectClass from "../../../Components/Hooks/useSelectClass";
 
+
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     const [select] = useSelectClass()
+
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -16,7 +18,6 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/instructors'>Instrouctors</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
-        
         {
             user ?
                 <div className="flex items-center">
