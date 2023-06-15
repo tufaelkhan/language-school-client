@@ -19,7 +19,7 @@ const PaymentHistory = () => {
                    
                     <thead className="">
                         <tr className=" bg-sky-500">
-                            <th></th>
+                            <th>#</th>
                             <th>Class Name</th>
                             <th>Price</th>
                             <th>Email</th>
