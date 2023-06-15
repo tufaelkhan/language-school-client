@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 const EnrolledClass = () => {
     const {user} = useAuth()
     const [enrolled, setEnrolled] = useState([])
-    // console.log(enrolled);
+    console.log(enrolled);
     useEffect(() => {
         fetch(`http://localhost:5000/payments/${user?.email}`)
             .then(res => res.json())
@@ -19,6 +19,7 @@ const EnrolledClass = () => {
                         <div className="card-body">
                             <h2 className="card-title font-bold">{clas?.className} Class</h2>
                             <p className=" text-xl ">Student Email: {clas?.email}</p>
+                            <p className=" text-xl ">Class ID: {clas?.classId}</p>
                             
                             <div className="card-actions "></div>
                             <h1 className=" text-xl">Status: <span className=" text-blue-700 font-bold">Enrolled </span></h1>

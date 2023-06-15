@@ -16,6 +16,7 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/instructors'>Instrouctors</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
+        
         {
             user ?
                 <div className="flex items-center">
