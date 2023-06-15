@@ -1,3 +1,4 @@
+import Animation from "../Banner/Animation";
 import Banner from "../Banner/Banner";
 import Contact from "../Contact/Contact";
 import Planning from "../Planning/Planning";
@@ -10,6 +11,7 @@ const Home = () => {
             <Helmet>
                 <title>Language school || Home </title>
             </Helmet>
+            <Animation></Animation>
             <Banner></Banner>
             <PopularClass></PopularClass>
             <Contact></Contact>
