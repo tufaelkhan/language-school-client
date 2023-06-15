@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import useSelectClass from "../../Components/Hooks/useSelectClass";
+import Animation from "../Home/Banner/Animation";
 
 const Classes = () => {
     const [classes, setClasses] = useState([])
@@ -93,6 +94,7 @@ const Classes = () => {
                     </div>)
                 }
             </div>
+            <Animation></Animation>
         </div>
     );
 };
