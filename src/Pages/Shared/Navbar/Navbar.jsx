@@ -6,7 +6,6 @@ import useSelectClass from "../../../Components/Hooks/useSelectClass";
 // import useAdmin from "../../../Components/Hooks/useAdmin";
 // import useInstructor from "../../../Components/Hooks/useInstructor";
 
-
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     const [select] = useSelectClass()
@@ -22,6 +21,11 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/instructors'>Instrouctors</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
+{/* {
+    isAdmin ? <li><Link to='/dashboard/allusers'>Dashboard</Link></li>:
+    <li><Link to='/dashboard/additem'>Dashboard</Link></li>
+   
+} */}
 
 {/* {
     isAdmin ? <li><Link to='/dashboard/allusers'>Dashboard</Link></li>: <>
