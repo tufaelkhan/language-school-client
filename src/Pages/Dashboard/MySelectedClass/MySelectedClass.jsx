@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import useSelectClass from "../../../Components/Hooks/useSelectClass";
 import { Link } from "react-router-dom";
-import { FaTrashAlt } from 'react-icons/fa';
+import { FaTrashAlt, FaWallet } from 'react-icons/fa';
 import Swal from "sweetalert2";
 
 const MySelectedClass = () => {
@@ -45,7 +45,6 @@ const MySelectedClass = () => {
             <div className="flex justify-between">
             <h2 className="text-3xl text-center uppercase">Your selectd classes: {select.length}</h2>
             <h2 className="text-3xl text-center uppercase">Total Amount: {total}</h2>
-            <Link to='/dashboard/payment'><button className="text-2xl btn btn-primary">pay</button></Link>
             </div>
             <div>
                 <div className="overflow-x-auto">
@@ -81,7 +80,7 @@ const MySelectedClass = () => {
                                     <td>
                                         {item.price}
                                     </td>
-                                    <td><Link state={item} to={`/dashboard/payment/${item._id}`}><button className="btn-secondary text-2xl p-2 btn rounded">pay</button></Link></td>
+                                    <td><Link state={item} to={`/dashboard/payment/${item._id}`}> <button className="btn-secondary text-2xl p-2 btn rounded"><FaWallet/> pay</button></Link></td>
                                     <td className="text-white">
                                         <button onClick={() => handleDelete(item)} className="btn btn-ghost text-2xl  bg-red-500"><FaTrashAlt></FaTrashAlt></button>
                                     </td>

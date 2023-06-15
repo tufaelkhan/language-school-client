@@ -3,7 +3,7 @@ import useMyClass from "../../../Components/Hooks/useMyClass";
 
 const MyAllClass = () => {
     const [ myclass] = useMyClass()
-    console.log(myclass);
+    // console.log(myclass);
     return (
         <div>
             <Helmet>

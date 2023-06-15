@@ -10,7 +10,10 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     const [select] = useSelectClass()
     // const [isAdmin] = useAdmin()
+    // console.log(isAdmin);
     // const [ isInstructor ] = useInstructor()
+    // console.log(isInstructor);
+
 
     const handleLogOut = () => {
         logOut()
@@ -21,6 +24,8 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/instructors'>Instrouctors</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
+        <li><Link to='/dashboard/myselectedclass'>DashBoard</Link></li>
+        {/* <li><Link to={ isAdmin ? '/dashboard/allusers': isInstructor ? '/dashboard/additem' : '/dashboard/myselectedclass'}>Dashboard</Link></li> */}
 {/* {
     isAdmin ? <li><Link to='/dashboard/allusers'>Dashboard</Link></li>:
     <li><Link to='/dashboard/additem'>Dashboard</Link></li>
