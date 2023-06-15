@@ -29,7 +29,7 @@ const PaymentHistory = () => {
                     <tbody className=" bg-sky-300 font-semibold">
                     {
                         paymentHistory && paymentHistory.map((item,i) =>  <tr key={item._id}>
-                            <th>{i+1}</th>
+                            <td>{i+1}</td>
                             <td>{item?.enrolledClass?.ClassName}</td>
                             <td>${item?.enrolledClass?.price}</td>
                             <td>{item?.email}</td>
