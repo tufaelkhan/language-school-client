@@ -4,7 +4,7 @@ const Footer = () => {
         <footer className="">
         <div className="footer p-10 bg-neutral text-neutral-content">
   <div>
-    <img src="../../../../public/logo.svg" alt="" />
+    <img src="../../../../src/assets/logo.png" alt="" />
     <p>Language School Ltd.<br/>Providing reliable Teaching since 2004</p>
   </div> 
   <div>

@@ -89,7 +89,7 @@ const router = createBrowserRouter([
         {
           path: 'myallclass/:id',
           element: <InstructorRoute><UpdateClass></UpdateClass></InstructorRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/myclass/${params.id}`)
+          loader: ({params}) => fetch(`https://language-school-server-nine.vercel.app/myclass/${params.id}`)
         },
       ]
     }

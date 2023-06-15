@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const MyAllClass = () => {
     const [ myclass] = useMyClass()
+    
     // console.log(myclass);
     return (
         <div>

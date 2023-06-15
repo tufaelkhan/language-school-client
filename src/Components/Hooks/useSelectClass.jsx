@@ -13,7 +13,7 @@ const useSelectClass = () =>{
         queryKey: ['selects', user?.email],
         enabled: !loading,
         // queryFn: async()=>{
-        //     const res = await fetch(`http://localhost:5000/selects?email=${user?.email}`,{ headers: {
+        //     const res = await fetch(`https://language-school-server-nine.vercel.app/selects?email=${user?.email}`,{ headers: {
         //         authorization: `bearer ${token}`
         //     }})
         //     return res.json()

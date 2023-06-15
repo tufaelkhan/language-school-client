@@ -8,7 +8,7 @@ import { Slide } from "react-awesome-reveal";
 const PopularClass = () => {
     const [classes, setClasses] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('https://language-school-server-nine.vercel.app/classes')
             .then(res => res.json())
             .then(data => {
                 const popularClassses = data.filter(item => item.category === 'popular')

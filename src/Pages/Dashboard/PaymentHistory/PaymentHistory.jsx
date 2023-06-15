@@ -6,7 +6,7 @@ const PaymentHistory = () => {
     const {user} = useAuth()
     const [paymentHistory, setPaymentHistory] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/payments/${user?.email}`)
+        fetch(`https://language-school-server-nine.vercel.app/payments/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setPaymentHistory(data)
@@ -30,7 +30,7 @@ const PaymentHistory = () => {
                     {
                         paymentHistory && paymentHistory.map((item,i) =>  <tr key={item._id}>
                             <td>{i+1}</td>
-                            <td>{item?.enrolledClass?.ClassName}</td>
+                            <td>{item?.className}</td>
                             <td>${item?.enrolledClass?.price}</td>
                             <td>{item?.email}</td>
                             <td>{item?.transactionId}</td>

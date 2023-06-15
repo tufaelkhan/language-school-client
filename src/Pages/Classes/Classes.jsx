@@ -18,7 +18,7 @@ const Classes = () => {
     const navigate = useNavigate()
     const location = useLocation()
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('https://language-school-server-nine.vercel.app/classes')
             .then(res => res.json())
             .then(data => {
                 setClasses(data)
@@ -28,7 +28,7 @@ const Classes = () => {
         // console.log(item);
         if (user && user.email) {
             const classItem = { classId: item._id, className: item.name, classImage: item.classImg, price: item.price, seats: item.seats, name: user.name, email: user.email }
-            fetch('http://localhost:5000/selects', {
+            fetch('https://language-school-server-nine.vercel.app/selects', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

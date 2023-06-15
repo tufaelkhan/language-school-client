@@ -24,7 +24,7 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/instructors'>Instrouctors</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
-        <li><Link to='/dashboard/myselectedclass'>DashBoard</Link></li>
+       {user && <li><Link to='/dashboard/myselectedclass'>DashBoard</Link></li>}
         {/* <li><Link to={ isAdmin ? '/dashboard/allusers': isInstructor ? '/dashboard/additem' : '/dashboard/myselectedclass'}>Dashboard</Link></li> */}
 {/* {
     isAdmin ? <li><Link to='/dashboard/allusers'>Dashboard</Link></li>:
@@ -67,7 +67,10 @@ const Navbar = () => {
                             {navOptions}
                         </ul>
                     </div>
-                    <Link className="btn btn-ghost text-xl uppercase">Language school</Link>
+                    <div className="flex">
+                        <span className="mr-3"><img className="" src="../../../../src/assets/nav.png" alt="" /></span>
+                        <span><Link className="btn btn-ghost text-xl uppercase">Language school</Link></span>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

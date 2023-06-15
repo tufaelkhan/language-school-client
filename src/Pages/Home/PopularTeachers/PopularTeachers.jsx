@@ -6,7 +6,7 @@ import { Slide } from "react-awesome-reveal";
 const PopularTeachers = () => {
     const [teachers, setTeachers] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/teachers')
+        fetch('https://language-school-server-nine.vercel.app/teachers')
             .then(res => res.json())
             .then(data => {
                 const popularClassses = data.filter(item => item.category === 'popular')

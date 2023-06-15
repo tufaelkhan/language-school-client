@@ -6,14 +6,19 @@ import useAxiosSecure from '../../../Components/Hooks/useAxiosSecure';
 const AllUsers = () => {
     const [ axiosSecure ] = useAxiosSecure()
     const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await axiosSecure.get('http://localhost:5000/users')
+        const res = await axiosSecure.get('https://language-school-server-nine.vercel.app/users')
         return res.data;
     })
     console.log(users);
     const handleMakeAdmin = user =>{
-        fetch(`http://localhost:5000/users/admin/${user._id}`,{
-            method: 'PATCH'
+        const token = localStorage.getItem('access-token');
+        fetch(`https://language-school-server-nine.vercel.app/users/admin/${user._id}`,{
+            method: 'PATCH',
+            headers: {
+                Authorization: `Bearer ${token}`
+            },
         })
+
         .then(res => res.json())
         .then(data => {
             console.log(data);
@@ -30,8 +35,12 @@ const AllUsers = () => {
         })
     }
     const handleMakeInstructor = user =>{
-        fetch(`http://localhost:5000/users/instructor/${user._id}`,{
-            method: 'PATCH'
+        const token = localStorage.getItem('access-token');
+        fetch(`https://language-school-server-nine.vercel.app/users/instructor/${user._id}`,{
+            method: 'PATCH',
+            headers: {
+                Authorization: `Bearer ${token}`
+            },
         })
         .then(res => res.json())
         .then(data => {
