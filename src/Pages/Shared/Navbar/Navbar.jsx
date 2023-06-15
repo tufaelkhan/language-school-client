@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { FaUser,FaRegBookmark  } from 'react-icons/fa';
 import useSelectClass from "../../../Components/Hooks/useSelectClass";
+// import useAdmin from "../../../Components/Hooks/useAdmin";
+// import useInstructor from "../../../Components/Hooks/useInstructor";
 
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext)
     const [select] = useSelectClass()
+    // const [isAdmin] = useAdmin()
+    // const [ isInstructor ] = useInstructor()
 
     const handleLogOut = () => {
         logOut()
@@ -18,6 +22,15 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/instructors'>Instrouctors</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
+
+{/* {
+    isAdmin ? <li><Link to='/dashboard/allusers'>Dashboard</Link></li>: <>
+    {
+        isInstructor ? <li><Link to='/dashboard/allusers'>Dashboard</Link></li>:
+       <></>
+    }
+    </>
+} */}
         {
             user ?
                 <div className="flex items-center">
